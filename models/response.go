@@ -21,6 +21,10 @@ func (r *JSONResponse) PrintJSONResponse(res http.ResponseWriter, statusCode int
 	json.NewEncoder(res).Encode(r)
 }
 
+func (r *JSONResponse) PrintUnauthorizeResponse(res http.ResponseWriter) {
+	r.PrintJSONResponse(res, http.StatusUnauthorized, "missing or invalid key", nil)
+}
+
 func (r *JSONResponse) PrintNotFoundResponse(res http.ResponseWriter) {
 	r.PrintJSONResponse(res, http.StatusNotFound, "not found", nil)
 }

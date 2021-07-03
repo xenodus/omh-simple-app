@@ -7,6 +7,10 @@ import (
 )
 
 func initRoutes(r *mux.Router) {
+
+	// Middleware
+	r.Use(checkAPIKey)
+
 	// Country
 	r.HandleFunc("/countries", controllers.GetCountries).Methods("GET").Name("GetCountry")
 	r.HandleFunc("/countries/{id:[0-9]+}", controllers.GetCountryByID).Methods("GET").Name("GetCountryByID")
