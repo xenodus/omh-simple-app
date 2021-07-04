@@ -29,6 +29,8 @@ API_KEY=
 
 ## API Endpoints
 
+Endpoints only accepts application/json Content-Type.
+
 Version prefix: /api/v1
 
 Countries
