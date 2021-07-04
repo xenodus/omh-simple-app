@@ -49,6 +49,7 @@ Properties
 
 ## Possible Improvments
 
+* Dockerizing the app
 * Throttling by apikey / ip address / user id. e.g. X number of requests per 24 hours. Perhaps, in in-memory store so no need to hit database.
 * User entitity, authentication and signup for apikey instead of hardcoding in .env
 * Use https://github.com/swaggo/swag for documentation
