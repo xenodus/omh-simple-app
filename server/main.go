@@ -32,6 +32,7 @@ func startHttpServer() {
 		Addr:         os.Getenv("API_SERVER_HOSTNAME") + ":" + os.Getenv("API_SERVER_PORT"),
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
+		IdleTimeout:  time.Second * 60,
 	}
 
 	log.Fatal(srv.ListenAndServe())
