@@ -190,7 +190,7 @@ func DeleteCountry(res http.ResponseWriter, req *http.Request) {
 	}
 
 	var country models.Country
-	deleteResult := database.DB.First(&country, countryID)
+	deleteResult := database.DB.Delete(&country, countryID)
 
 	if deleteResult.Error != nil {
 		if errors.Is(deleteResult.Error, gorm.ErrRecordNotFound) {
