@@ -185,7 +185,7 @@ func DeleteProperty(res http.ResponseWriter, req *http.Request) {
 	}
 
 	var property models.Property
-	deleteResult := database.DB.First(&property, propertyID)
+	deleteResult := database.DB.Delete(&property, propertyID)
 
 	if deleteResult.Error != nil {
 		if errors.Is(deleteResult.Error, gorm.ErrRecordNotFound) {
