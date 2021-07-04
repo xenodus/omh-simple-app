@@ -10,7 +10,7 @@ Data storage used was MySQL.
 
 ## Setup Instructions
 
-1. Create a .env file. You can reference .env.sample and fill in the appropriate values.
+1. Create a .env file. You can rename .env.sample to .env and replace the sample values.
 
 ```
 MYSQL_HOSTNAME=
