@@ -20,3 +20,23 @@ API_KEY=
 ```
 
 2. Build the app with ```go build``` and run the ```omh-simple-app``` binary.
+
+## API Endpoints
+
+Version prefix: /api/v1
+
+Countries
+
+* Get all countries (GET) - /countries
+* Get a country (GET) - /countries/{countryID}
+* Create a country (POST) - /countries
+* Update a country (PUT) - /countries/{countryID}
+* Delete a country (DELETE) - /countries/{countryID}
+
+Properties
+
+* Get all properties (GET) - /properties
+* Get a property (GET) - /properties/{propertyID}
+* Create a property (POST) - /properties
+* Update a property (PUT) - /properties/{propertyID}
+* Delete a property (DELETE) - /properties/{propertyID}
