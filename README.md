@@ -2,6 +2,12 @@
 
 This app provides REST API endpoints for real estate property and country.
 
+There's an association between Property and Country whereby a Property belongs to a Country.
+
+Property and country models contains only Name property for the scope of this app.
+
+Data storage used was MySQL.
+
 ## Setup Instructions
 
 1. Create a .env file. You can reference .env.sample and fill in the appropriate values.
@@ -40,3 +46,16 @@ Properties
 * Create a property (POST) - /properties
 * Update a property (PUT) - /properties/{propertyID}
 * Delete a property (DELETE) - /properties/{propertyID}
+
+## Possible Improvments
+
+* Throttling by apikey / ip address / user id. e.g. X number of requests per 24 hours. Perhaps, in in-memory store so no need to hit database.
+* User entitity, authentication and signup for apikey instead of hardcoding in .env
+* Use https://github.com/swaggo/swag for documentation
+
+## Libraries Used
+
+* https://github.com/joho/godotenv - Reading from .env
+* https://github.com/gorilla/mux - Routing
+* https://github.com/go-gorm/gorm - ORM
+* https://github.com/go-gorm/mysql - MySQL Driver
